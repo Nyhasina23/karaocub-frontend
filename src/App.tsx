@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import "./App.css";
+import SingIn from "./views/authentication/SingIn";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<WithoutNav />}>
+            <Route path="/" element={<SingIn />} />
+          </Route>
+          <Route element={<WithNav />}>
+            <Route path="/" element={<SingIn />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
+const WithNav = () => {
+  return (
+    <>
+      <div className="w-full mb-14">
+        <Outlet />
+      </div>
+      {/* <NavBar /> */}
+    </>
+  );
+};
+const WithoutNav = () => {
+  return <Outlet />;
+};
 export default App;
