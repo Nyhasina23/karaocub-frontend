@@ -1,0 +1,14 @@
+.signin-btn {
+  border-radius: 22px;
+  background: linear-gradient(268deg, #9c2fea 2.88%, #e327f0 135.22%);
+  display: flex;
+  height: 54px;
+  padding: 18px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.5s ease;
+}
+.signin-btn:hover {
+  background: linear-gradient(268deg, #9c2fea 3.88%, #e327f0 35.52%);
+}
