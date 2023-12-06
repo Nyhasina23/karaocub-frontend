@@ -4,6 +4,21 @@ import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { PiMicrophoneFill } from "react-icons/pi";
 import { FaRegStar } from "react-icons/fa6";
 import CardItem from "./CardItem";
+
+import cat1 from "../assets/Image.png";
+import cat2 from "../assets/Image (1).png";
+import cat3 from "../assets/Image (2).png";
+import cat4 from "../assets/Image (3).png";
+import cat5 from "../assets/Image (4).png";
+
+const categories = [
+  { name: "Le plus chantés", image: cat2 },
+  { name: "Top 50 Karaoké", image: cat1 },
+  { name: "Chansons Disney", image: cat3 },
+  { name: "Chansons françaises", image: cat4 },
+  { name: "Années 90’s", image: cat5 },
+];
+
 interface ListCardProps {
   type: string;
   text: string;
@@ -50,14 +65,10 @@ const ListCard: React.FC<ListCardProps> = ({ type, text, info }) => {
         </h1>
       </div>
       {/* card */}
-      <div className="mt-8 flex flex-wrap">
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
+      <div className="mt-8 flex flex-wrap justify-between">
+        {categories.map((cat) => (
+          <CardItem text={cat.name} image={cat.image} />
+        ))}
       </div>
     </div>
   );
