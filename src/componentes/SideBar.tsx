@@ -21,6 +21,7 @@ import { BsFileEarmarkMusic } from "react-icons/bs";
 import { PiWaveform } from "react-icons/pi";
 import { MdOutlineMusicNote } from "react-icons/md";
 import { TfiMicrophone } from "react-icons/tfi";
+import AddButton from "./AddButton";
 
 export function SideBar() {
   const [open, setOpen] = React.useState(0);
@@ -196,28 +197,31 @@ export function SideBar() {
             </AccordionHeader>
           </ListItem>
           {open === 2 && (
-            <AccordionBody className="py-1">
-              <List className="p-0">
-                <ListItem className="text-white">
-                  <ListItemPrefix>
-                    <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
-                  </ListItemPrefix>
-                  Analytics
-                </ListItem>
-                <ListItem className="text-white">
-                  <ListItemPrefix>
-                    <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
-                  </ListItemPrefix>
-                  Reporting
-                </ListItem>
-                <ListItem className="text-white">
-                  <ListItemPrefix>
-                    <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
-                  </ListItemPrefix>
-                  Projects
-                </ListItem>
-              </List>
-            </AccordionBody>
+            <>
+              <AccordionBody className="py-1">
+                <List className="p-0">
+                  <ListItem className="text-white">
+                    <ListItemPrefix>
+                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                    </ListItemPrefix>
+                    Analytics
+                  </ListItem>
+                  <ListItem className="text-white">
+                    <ListItemPrefix>
+                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                    </ListItemPrefix>
+                    Reporting
+                  </ListItem>
+                  <ListItem className="text-white">
+                    <ListItemPrefix>
+                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                    </ListItemPrefix>
+                    Projects
+                  </ListItem>
+                </List>
+              </AccordionBody>
+              <AddButton text="AJOUTER UNE PLAYLIST" />
+            </>
           )}
         </Accordion>
       </List>

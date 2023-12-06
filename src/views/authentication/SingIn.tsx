@@ -1,8 +1,14 @@
 import InputField from "../../componentes/InputField";
 import backImage from "../../assets/Vector.png";
 import logo from "../../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const SingIn = () => {
+  const navigate = useNavigate();
+  const signIn = () => {
+    navigate("/user");
+  };
+
   return (
     <div className="relative flex w-full h-screen items-center justify-center bg-[#010827]">
       <img
@@ -16,15 +22,20 @@ const SingIn = () => {
           src={logo}
           alt="logo"
         />
-        <h1 className="mb-6 text-2xl text-[#333] font-semibold">Sign in</h1>
-        <InputField label="Email" className="mb-4" />
-        <InputField label="Password" className="mb-4" />
-        <button className="signin-btn w-full mb-8 text-white font-medium transition-all duration-300">
-          Sign in
+        <h1 className="mb-6 text-2xl text-[#333] font-semibold">
+          Connectez-vous
+        </h1>
+        <InputField label="Adresse éléctronique " className="mb-4" />
+        <InputField label="Mot de passe" className="mb-4" />
+        <button
+          className="signin-btn w-full mb-8 text-white font-medium transition-all duration-300"
+          onClick={signIn}
+        >
+          Se Connecter
         </button>
         <p className="text-center text-[#333]">
-          Please sign in to your account to access all features and manage your
-          event.
+          Veuillez vous connecter à votre compte pour accéder à toutes les
+          fonctionnalités et gérer votre événement.
         </p>
       </div>
     </div>

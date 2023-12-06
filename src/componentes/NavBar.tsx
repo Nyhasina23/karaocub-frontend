@@ -12,7 +12,7 @@ const NavBar = () => {
           >
             <span className="rounded-md shadow-sm">
               <button
-                className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out hover:text-gray-500 focus:outline-none "
+                className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-white transition duration-150 ease-in-out hover:text-[#D141B2] focus:outline-none "
                 type="button"
                 aria-haspopup="true"
                 aria-expanded="true"
@@ -33,7 +33,7 @@ const NavBar = () => {
               </button>
             </span>
             {showNavbar && (
-              <div className="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+              <div className="dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95 mr-4">
                 <div
                   className="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none"
                   aria-labelledby="headlessui-menu-button-1"
