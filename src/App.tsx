@@ -4,6 +4,8 @@ import SingIn from "./views/authentication/SingIn";
 import { Provider } from "react-redux";
 import { persistor, store } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
+import UserPage from "./views/users/UserPage";
+import NavBar from "./componentes/NavBar";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
                 <Route path="/" element={<SingIn />} />
               </Route>
               <Route element={<WithNav />}>
-                <Route path="/" element={<SingIn />} />
+                <Route path="/user" element={<UserPage />} />
               </Route>
             </Routes>
           </BrowserRouter>
@@ -29,10 +31,10 @@ function App() {
 const WithNav = () => {
   return (
     <>
+      <NavBar />
       <div className="w-full mb-14">
         <Outlet />
       </div>
-      {/* <NavBar /> */}
     </>
   );
 };

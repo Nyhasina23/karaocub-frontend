@@ -1,4 +1,3 @@
-import React from "react";
 import InputField from "../../componentes/InputField";
 import backImage from "../../assets/Vector.png";
 import logo from "../../assets/Logo.png";
