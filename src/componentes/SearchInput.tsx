@@ -9,11 +9,11 @@ const SearchInput: React.FC<SearchInputProps> = ({ placeholder }) => {
   return (
     <div className="flex items-center relative">
       <input
-        className=" w-full placeholder-white text-white p-4 rounded-md bg-slate-100 bg-opacity-20 focus:border-[#E327F0] border border-[#e327f09f]"
+        className="ring-1 ring-[#9c2fea] w-full placeholder-white text-white p-4 rounded-md bg-[#F5EEFF25] bg-opacity-20 border border-[#e327f09f] focus:outline-none focus:ring-2 focus:ring-[#9c2fea]"
         type="text"
         placeholder={placeholder}
       />
-      <button className="absolute top-2 right-2 bg-gradient-to-r from-[#3F51A7] to-[#E327F0] p-2 rounded-md">
+      <button className="absolute top-2 right-2 searchButton p-2 rounded-md">
         <IoSearch color="#FFF" size={23} />
       </button>
     </div>

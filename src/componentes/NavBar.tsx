@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const NavBar = () => {
   const [showNavbar, setShowNavbar] = useState<boolean>(false);
   return (
-    <nav className="flex justify-end py-4 items-center bg-[#061559]">
+    <nav className="flex justify-end py-4 items-center bg-[#06155988]">
       <div>
         <div className="flex items-center justify-center">
           <div

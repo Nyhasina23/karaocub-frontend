@@ -33,7 +33,7 @@ export const IconHeader: React.FC<any> = ({ type }): any => {
 };
 const ListIem: React.FC<ListItemProps> = ({ type, text, info, icon }) => {
   return (
-    <div>
+    <div className="mr-20">
       {/* header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex">

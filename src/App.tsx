@@ -6,10 +6,19 @@ import { persistor, store } from "./store/store";
 import { PersistGate } from "redux-persist/integration/react";
 import UserPage from "./views/users/UserPage";
 import NavBar from "./componentes/NavBar";
+import backImage from './assets/background.png';
 
 function App() {
   return (
-    <div className="App">
+    <div
+      style={{
+        backgroundImage: `url(${backImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100vw',
+        height: '100vh',
+      }}
+    >
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter>

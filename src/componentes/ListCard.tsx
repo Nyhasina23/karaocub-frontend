@@ -12,7 +12,7 @@ import cat4 from "../assets/Image (3).png";
 import cat5 from "../assets/Image (4).png";
 
 const categories = [
-  { name: "Le plus chantés", image: cat2 },
+  { name: "Les plus chantés", image: cat2 },
   { name: "Top 50 Karaoké", image: cat1 },
   { name: "Chansons Disney", image: cat3 },
   { name: "Chansons françaises", image: cat4 },
@@ -65,7 +65,7 @@ const ListCard: React.FC<ListCardProps> = ({ type, text, info }) => {
         </h1>
       </div>
       {/* card */}
-      <div className="mt-8 flex flex-wrap justify-between">
+      <div className="mt-8 flex flex-wrap">
         {categories.map((cat) => (
           <CardItem text={cat.name} image={cat.image} />
         ))}

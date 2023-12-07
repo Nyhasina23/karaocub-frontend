@@ -1,14 +1,14 @@
 import React from "react";
 import { IoTimerOutline } from "react-icons/io5";
-import { TbMusic } from "react-icons/tb";
-import AddButton from "./AddButton";
+import heartImg from './../assets/icons/heart.svg'
+import playlistAdd from './../assets/icons/playlistAdd.svg'
 const ListIemContent = () => {
   return (
-    <div className="container flex mx-auto w-full items-center justify-center">
+    <div className="container flex mx-auto w-full items-center justify-center pl-30">
       <ul className="flex flex-col pb-1 w-full">
         <div className="flex mb-1 bg-[#081A6C] select-none cursor-pointer rounded-md  flex-1 items-center p-4  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg">
           <div className="w-1/4 flex items-center justify-around  h-12">
-            <TbMusic color="#D141B2" className="mr-2 h-[1.5rem] w-[1.5rem]" />
+            <img src={heartImg} alt="" />
             <div className="flex items-center">
               <img
                 alt="song"
@@ -34,7 +34,7 @@ const ListIemContent = () => {
           </div>
           <div className="w-1/4 flex items-center justify-center  h-12">
             <div className="text-slate-50 text-xs">
-              <AddButton text="AJOUTER AU PLAYLIST" />
+              <img src={playlistAdd} alt="" />
             </div>
           </div>
         </div>

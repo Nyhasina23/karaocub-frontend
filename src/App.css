@@ -7,6 +7,9 @@
 html {
   overflow-y: hidden;
 }
+body{
+  background-color: #061149;
+}
 
 .signin-btn {
   border-radius: 22px;
@@ -58,4 +61,9 @@ html {
   );
 
   backdrop-filter: blur(37px);
+}
+
+
+.searchButton{
+  background: linear-gradient(268deg, #9C2FEA 2.88%, #E327F0 135.22%);
 }

@@ -11,16 +11,18 @@ import {
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/Logo.png";
-import { HiOutlineHome } from "react-icons/hi";
-import { BiBookOpen } from "react-icons/bi";
+import homeImg from "./../assets/icons/home.svg";
+import repertoireImg from "./../assets/icons/repertoire.svg";
+import categoriesImg from "./../assets/icons/categories.svg";
+import voiceImg from "./../assets/icons/voice.svg";
+import songWhiteImg from "./../assets/icons/songWhite.svg";
+import micImg from "./../assets/icons/mic.svg";
+import playlistImg from "./../assets/icons/playlist.svg";
+import playlistSmallImg from "./../assets/icons/playlistSmall.svg";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
-import { TbPlaylist } from "react-icons/tb";
 import { MdLibraryMusic } from "react-icons/md";
 import { BsFileEarmarkMusic } from "react-icons/bs";
-import { PiWaveform } from "react-icons/pi";
-import { MdOutlineMusicNote } from "react-icons/md";
-import { TfiMicrophone } from "react-icons/tfi";
 import AddButton from "./AddButton";
 
 export function SideBar() {
@@ -60,10 +62,7 @@ export function SideBar() {
         >
           <ListItem className="border-b-0 p-3" selected={open === 1}>
             <ListItemPrefix>
-              <HiOutlineHome
-                color="white"
-                className="h-[1.5rem] w-[1.5rem] mr-1"
-              />
+              <img src={homeImg} alt="" />
             </ListItemPrefix>
             <Typography color="white" className="mr-auto font-normal">
               Accueil
@@ -76,10 +75,7 @@ export function SideBar() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <BiBookOpen
-                  color="white"
-                  className="h-[1.5rem] w-[1.5rem] mr-1"
-                />
+                <img src={repertoireImg} alt="" />
               </ListItemPrefix>
               <Typography color="white" className="mr-auto font-normal">
                 Répertoire
@@ -91,10 +87,7 @@ export function SideBar() {
               <List className="p-0">
                 <ListItem className="text-white">
                   <ListItemPrefix>
-                    <PiWaveform
-                      color="white"
-                      className="h-[1.5rem] w-[1.5rem] mr-1"
-                    />
+                    <img src={voiceImg} alt="" />
                   </ListItemPrefix>
                   Les plus chantés
                 </ListItem>
@@ -116,10 +109,7 @@ export function SideBar() {
                       className="border-b-0 p-3"
                     >
                       <ListItemPrefix>
-                        <BiCategory
-                          color="white"
-                          className="h-[1.5rem] w-[1.5rem] mr-1"
-                        />
+                        <img src={categoriesImg} alt="" />
                       </ListItemPrefix>
                       <Typography color="white" className="mr-auto font-normal">
                         Catégories
@@ -127,14 +117,11 @@ export function SideBar() {
                     </AccordionHeader>
                   </ListItem>
                   {openSubCat === 1 && (
-                    <AccordionBody className="py-1 ml-8">
+                    <AccordionBody className="p-0 ml-4">
                       <List className="p-0">
                         <ListItem className="text-white">
                           <ListItemPrefix>
-                            <BiCategory
-                              color="white"
-                              className="h-[1.5rem] w-[1.5rem] mr-1"
-                            />
+                            <img src={categoriesImg} alt="" />
                           </ListItemPrefix>
                           Sous catégories
                         </ListItem>
@@ -145,28 +132,22 @@ export function SideBar() {
 
                 <ListItem className="text-white">
                   <ListItemPrefix>
-                    <MdOutlineMusicNote
-                      color="white"
-                      className="h-[1.5rem] w-[1.5rem] mr-1"
-                    />
+                    <img src={songWhiteImg} alt="" />
                   </ListItemPrefix>
-                  Titre
+                  Titres
                 </ListItem>
                 <ListItem className="text-white">
                   <ListItemPrefix>
-                    <TfiMicrophone
-                      color="white"
-                      className="h-[1.5rem] w-[1.5rem] mr-1"
-                    />
+                    <img src={micImg} alt="" />
                   </ListItemPrefix>
-                  Artiste
+                  Artistes
                 </ListItem>
               </List>
             </AccordionBody>
           )}
         </Accordion>
       </List>
-      <hr className="mt-40 mb-10 !border-[#F5EEFF]" />
+      <hr className="mt-40 mb-10 separator" />
       <List>
         <Accordion
           open={open === 2}
@@ -186,10 +167,7 @@ export function SideBar() {
               className="border-b-0 p-3"
             >
               <ListItemPrefix>
-                <TbPlaylist
-                  color="white"
-                  className="h-[1.5rem] w-[1.5rem] mr-1"
-                />
+                <img src={playlistImg} alt="" />
               </ListItemPrefix>
               <Typography color="white" className="mr-auto font-normal">
                 Vos playlists
@@ -202,19 +180,19 @@ export function SideBar() {
                 <List className="p-0">
                   <ListItem className="text-white">
                     <ListItemPrefix>
-                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                      <img src={playlistSmallImg} alt="" />
                     </ListItemPrefix>
                     Analytics
                   </ListItem>
                   <ListItem className="text-white">
                     <ListItemPrefix>
-                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                      <img src={playlistSmallImg} alt="" />
                     </ListItemPrefix>
                     Reporting
                   </ListItem>
                   <ListItem className="text-white">
                     <ListItemPrefix>
-                      <MdLibraryMusic className="h-4 w-4 text-slate-50 mr-[0.1rem]" />
+                      <img src={playlistSmallImg} alt="" />
                     </ListItemPrefix>
                     Projects
                   </ListItem>
